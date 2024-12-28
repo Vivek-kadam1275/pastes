@@ -34,13 +34,11 @@ function App() {
         <ViewPaste/>
       </div>
     }
-  
-  
   ])
   return (
     <div className='relative'>
       <RouterProvider router={router}/>
-      <Toaster className="absolute right-0"/> 
+      <Toaster /> 
     </div>
   )
 }
