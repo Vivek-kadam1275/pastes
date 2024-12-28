@@ -79,7 +79,7 @@ const Pastes = (props) => {
                       <RWebShare
                         data={{
                           text: "Web Share - vk",
-                          url: `${window.location.origin}/${item._id}`,
+                          url: `${window.location.origin}/pastes/pastes/${item._id}`,
                           title: "paste link",
                         }}
                         onClick={() => {
