@@ -36,7 +36,9 @@ function App() {
     }
   
   
-  ])
+  ],{
+    basename: '/pastes' // Set the base path here
+  })
   return (
     <div className='relative'>
       <RouterProvider router={router}/>
