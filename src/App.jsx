@@ -38,7 +38,7 @@ function App() {
   return (
     <div className='relative'>
       <RouterProvider router={router}/>
-      <Toaster /> 
+      <Toaster position='top-right'/> 
     </div>
   )
 }

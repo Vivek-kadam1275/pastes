@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { useParams, useSearchParams } from "react-router-dom";
 import { addToPastes, updateToPastes } from "../redux/slices/pasteSlice";
 import { MdContentCopy } from "react-icons/md";
-
+import toast from "react-hot-toast";
 
 const ViewPaste = (props) => {
 
@@ -18,13 +18,13 @@ const ViewPaste = (props) => {
 
   return (
 
-    <div className="flex flex-col gap-5 max-w-[1200px] mx-auto mt-5 ">
+    <div className="flex flex-col gap-5 max-w-[1200px] mx-auto mt-5 screenMargin ">
 
       <div className="flex gap-10 max-w-[1200px]">
         <input type="text" placeholder="Enter title here" value={pastes[index].title} name="title" onChange={(e) => {
           setTitle(e.target.value);
           // console.log(title);
-        }} className="p-2 px-5 text-lg w-[80%] border rounded-md cursor-not-allowed" required />
+        }} className="p-2 px-5 text-lg w-[100%] border rounded-md cursor-not-allowed" required />
 
 
 
@@ -37,7 +37,10 @@ const ViewPaste = (props) => {
             <div className="w-4 h-4 rounded-full bg-[#febc2e]"></div>
             <div className="w-4 h-4 rounded-full bg-[#2dc842]"></div>
           </div>
-          <button>
+          <button onClick={()=>{
+             navigator.clipboard.writeText(pastes[index].content);
+             toast.success("Copied successfully")
+          }}>
             <MdContentCopy />
 
           </button>

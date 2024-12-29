@@ -32,27 +32,23 @@ const Pastes = (props) => {
   }
 
 
-
-
-
-
   return (
-    <div className="max-w-[1200px] mx-auto mt-20  flex flex-col gap-5">
+    <div className="max-w-[1200px] mx-auto mt-20  flex flex-col gap-5 screenMargin">
 
-      <input type="search" value={searchItem} name="searchItem" placeholder="search paste here..." className="px-5 py-2 w-full border rounded-md" onChange={(e) => setSearchItem(e.target.value)} />
+      <input type="search" value={searchItem} name="searchItem" placeholder="search paste here..." className="px-5 py-2 w-full border rounded-md " onChange={(e) => setSearchItem(e.target.value)} />
 
       <div className="border rounded-md">
         <div className="border-b rounded-md" >
-          <h1 className="text-4xl font-bold px-5 py-2">All Pastes</h1>
+          <h1 className="text-4xl font-bold px-5 py-2 text-center" >All Pastes</h1>
         </div>
         <div className=" py-4 px-5">
-          {filteredData.length > 0 ? <div className="flex flex-col gap-4">
+          {filteredData.length > 0 ? <div className="flex flex-col gap-4 ">
             {filteredData.map((item) => {
               return (
-                <div key={item._id} className="border rounded-md px-5 py-4 flex justify-between">
-                  <div className="flex flex-col gap-5 w-[50%]">
-                    <div className="text-3xl font-semibold">{item.title} </div>
-                    <div className="text-[#707070] line-clamp-3 text-balance"> {item.content} </div>
+                <div key={item._id} className="border rounded-md px-5 py-4 flex justify-between pastes-col">
+                  <div className="flex flex-col gap-5 w-[50%] title-cont-res">
+                    <div className="text-3xl font-semibold text-center-res">{item.title} </div>
+                    <div className="text-[#707070] line-clamp-3 text-balance text-center-res"> {item.content} </div>
                   </div>
                   <div className="flex flex-col gap-5">
                     <div className="flex gap-2">
@@ -93,7 +89,7 @@ const Pastes = (props) => {
                         </button>
                       </RWebShare>
                     </div>
-                    <div>{item.createdAt}</div>
+                    <div className="text-center-res">{item.createdAt}</div>
                   </div>
                 </div>
               )

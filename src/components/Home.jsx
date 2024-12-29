@@ -49,15 +49,15 @@ const Home = (props) => {
   }
 
   return (
-    <div className="flex flex-col gap-5 max-w-[1200px] mx-auto mt-5 ">
+    <div className="flex flex-col gap-5 max-w-[1200px] mx-auto mt-5 screenMargin">
 
       <div className="flex gap-10 max-w-[1200px]">
         <input type="text" placeholder="Title" value={title} name="title" onChange={(e) => {
           setTitle(e.target.value);
           // console.log(title);
-        }} className="p-2 px-5 text-lg w-[80%] border rounded-md" required />
+        }} className="p-2 px-5  w-[80%] border rounded-md" required />
 
-        <button className="  text-white rounded-md w-[20%] bg-[#1d4ed8] font-semibold" onClick={createPaste}>
+        <button className="  text-white rounded-md w-[20%] min-w-fit bg-[#1d4ed8] font-semibold px-2" onClick={createPaste}>
           {pasteId ? "update my paste" : "create my paste"}
         </button>
 

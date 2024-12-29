@@ -9,6 +9,29 @@
 }
 
 
+@media screen and (max-width:1245px){
+    .screenMargin{
+        margin: 20px 20px;
+    }
+}
+
+@media screen and (max-width:700px){
+   .title-cont-res{
+      gap: 2px;
+
+   }
+   .pastes-col{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+   }
+   .text-center-res{
+    text-align: center;
+   }
+    
+}
+
 
 /* :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
