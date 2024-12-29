@@ -21,7 +21,7 @@ const ViewPaste = (props) => {
     <div className="flex flex-col gap-5 max-w-[1200px] mx-auto mt-5 screenMargin ">
 
       <div className="flex gap-10 max-w-[1200px]">
-        <input type="text" placeholder="Enter title here" value={pastes[index].title} name="title" onChange={(e) => {
+        <input disabled type="text" placeholder="Enter title here" value={pastes[index].title} name="title" onChange={(e) => {
           setTitle(e.target.value);
           // console.log(title);
         }} className="p-2 px-5 text-lg w-[100%] border rounded-md cursor-not-allowed" required />
